@@ -49,7 +49,7 @@ public class Test07_seletCount {
 			// 2) 칼럼명으로 접근
 
 			System.out.println("전체 행 갯수 : " + rs.getInt("cnt"));
-
+ 
 		} catch (Exception e) {
 			System.out.println("오라클 JDBC 조회 실패 : " + e);
 		}finally {
