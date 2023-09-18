@@ -14,7 +14,7 @@ public class Test01_DBOpne {
 			String user = "system";
 			String password = "1234";
 			String driver = "oracle.jdbc.driver.OracleDriver"; // ojdbc8.jar
-
+ 
 			// 2) 드라이버 로딩
 			Class.forName(driver);
   
