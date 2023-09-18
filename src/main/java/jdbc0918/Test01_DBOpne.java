@@ -17,7 +17,7 @@ public class Test01_DBOpne {
 
 			// 2) 드라이버 로딩
 			Class.forName(driver);
- 
+  
 			// 3) 오라클 DB 서버 연결
 			DriverManager.getConnection(url, user, password);
 
