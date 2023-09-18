@@ -9,13 +9,13 @@ public class Test08_seletOne {
 
 	public static void main(String[] args) {
 		// sungjuk 테이블에서 한 행 가져오기
-		
+
 		int sno = 1;
-		
+
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		ResultSet rs = null; //select문을 실행한 결과(테이블)을 저장
-		
+		ResultSet rs = null; // select문을 실행한 결과(테이블)을 저장
+
 		try {
 
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
@@ -24,7 +24,6 @@ public class Test08_seletOne {
 			String driver = "oracle.jdbc.driver.OracleDriver"; // ojdbc8.jar
 			Class.forName(driver);
 			con = DriverManager.getConnection(url, user, password);
-		
 
 			// 3) 오라클 DB 서버 연결
 			System.out.println("오라클  JDBC 서버 연결 성공!!: ");
@@ -33,11 +32,10 @@ public class Test08_seletOne {
 			sql.append(" SELECT sno, uname, kor, eng, mat, tot, aver, addr, wdate");
 			sql.append(" FROM sungjuk");
 			sql.append(" WHERE sno = ?");
-			
-			
+
 			pstmt = con.prepareStatement(sql.toString());
 			pstmt.setInt(1, sno);
-			
+
 			rs = pstmt.executeQuery();
 
 			if (rs.next()) {
@@ -55,7 +53,7 @@ public class Test08_seletOne {
 				System.out.println(rs.getString(9));
 
 				System.out.println("-----------------");
-				
+
 				// 2) 칼럼명으로 접근
 				System.out.println(rs.getInt("sno"));
 				System.out.println(rs.getString("uname"));
@@ -70,7 +68,7 @@ public class Test08_seletOne {
 			} else {
 				System.out.println("자료없음~~");
 			} // if end
-			
+
 		} catch (Exception e) {
 			System.out.println("오라클 JDBC 조회 실패 : " + e);
 		}finally {
