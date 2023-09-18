@@ -23,7 +23,7 @@ public class Test06_update {
 			String password = "1234";
 			String driver = "oracle.jdbc.driver.OracleDriver"; // ojdbc8.jar
 			Class.forName(driver);
-
+ 
 			// 3) 오라클 DB 서버 연결
 			Connection con = DriverManager.getConnection(url, user, password);
 
