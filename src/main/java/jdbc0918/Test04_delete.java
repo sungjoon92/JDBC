@@ -7,7 +7,7 @@ import java.sql.PreparedStatement;
 public class Test04_delete {
 
 	public static void main(String[] args) {
-		// sungjuk 테이블 행 추가 연습
+		// sungjuk 테이블 행 삭제 연습
 
 		try {
 
