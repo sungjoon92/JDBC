@@ -16,7 +16,7 @@ public class Test05_insert {
 			String password = "1234";
 			String driver = "oracle.jdbc.driver.OracleDriver"; // ojdbc8.jar
 			Class.forName(driver);
-
+ 
 			// 3) 오라클 DB 서버 연결
 			Connection con = DriverManager.getConnection(url, user, password);
 			System.out.println("오라클  JDBC 서버 연결 성공!!: ");
