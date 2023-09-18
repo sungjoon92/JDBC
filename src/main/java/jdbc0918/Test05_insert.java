@@ -16,7 +16,7 @@ public class Test05_insert {
 			String password = "1234";
 			String driver = "oracle.jdbc.driver.OracleDriver"; // ojdbc8.jar
 			Class.forName(driver);
- 
+
 			// 3) 오라클 DB 서버 연결
 			Connection con = DriverManager.getConnection(url, user, password);
 			System.out.println("오라클  JDBC 서버 연결 성공!!: ");
@@ -24,7 +24,7 @@ public class Test05_insert {
 			String name = "박지성";
 			int kor = 99, eng = 98, mat = 100;
 			String addr = "Seoul";
-
+ 
 			StringBuilder sql = new StringBuilder();
 			sql.append(" INSERT INTO sungjuk(sno, uname ,kor, eng, mat, addr, wdate)");
 			sql.append(" VALUES (sungjuk_seq.nextval, ?, ?, ?, ?, ?, sysdate)");
