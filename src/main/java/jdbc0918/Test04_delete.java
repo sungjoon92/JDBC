@@ -32,7 +32,7 @@ public class Test04_delete {
 			} else {
 				System.out.println("행 삭제 성공!!");
 			} // if end
-
+ 
 			// 자료 반납 (순서주의)
 			pstmt.close();
 			con.close();
