@@ -7,7 +7,7 @@ public class Test01_DBOpne {
 	public static void main(String[] args) {
 
 		// Oracle database XE 18c 연결
-
+ 
 		try {
 			// 1) 오라클DB 서버 연결 관련 정보
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
