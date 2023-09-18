@@ -36,7 +36,7 @@ public class Test03_update {
 			} else {
 				System.out.println("행 수정 성공!!");
 			} // if end
-
+ 
 			// 자료 반납 (순서주의)
 			pstmt.close();
 			con.close();
