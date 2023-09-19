@@ -8,14 +8,12 @@ import java.sql.ResultSet;
 public class Test01_selectAll {
 
 	public static void main(String[] args) {
-		// sunkjuk 테이블 전체 행 조회하기	
-		
+		// sunkjuk 테이블 전체 행 조회하기
 
 		Connection con = null; // DB를 연결하는 함수
-		PreparedStatement pstmt = null;  //sql문으로 변환시켜주는 함수
+		PreparedStatement pstmt = null; // sql문으로 변환시켜주는 함수
 		ResultSet rs = null; // select문을 실행한 결과(테이블)을 저장
-		
-		
+
 		try {
 			String url = "jdbc:oracle:thin:@localhost:1521:xe";
 			String user = "system";
@@ -50,31 +48,37 @@ public class Test01_selectAll {
 					System.out.print(rs.getString("addr") + " ");
 					System.out.print(rs.getString("wdate") + " ");
 					System.out.println();
-				} while (rs.next());{} // while end
-				
+				} while (rs.next());
+				{
+				} // while end
+
 			} else {
 				System.out.println("자료없음~~");
 			} // if end
-		
 
 		} catch (Exception e) {
 			System.out.println("오라클 JDBC 조회 실패 : " + e);
-		}finally {
+		} finally {
 			try {
-				if(rs!=null) {rs.close(); }
-			}catch (Exception e2) {}
+				if (rs != null) {
+					rs.close();
+				}
+			} catch (Exception e2) {
+			}
 			try {
-				if(pstmt!=null) {rs.close(); }
-			}catch (Exception e2) {}
+				if (pstmt != null) {
+					rs.close();
+				}
+			} catch (Exception e2) {
+			}
 			try {
-				if(con!=null) {rs.close(); }
-			}catch (Exception e2) {}
-			
-		}//try ~ catch end
-		
-		
-		
-		
-		
-	}//main end
-}//class end
+				if (con != null) {
+					rs.close();
+				}
+			} catch (Exception e2) {
+			}
+
+		} // try ~ catch end
+
+	}// main end
+}// class end
